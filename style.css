@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.container .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+}
+
+.container .top .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 25px;
+    margin-right: 40px;
+    font-size: 48px;
+}
+
+
+.container .top .navbar .icon {
+    margin: auto 10px;
+    color: #444;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.container .top .navbar .icon:hover {
+    margin: auto 10px;
+    color: rgb(210, 39, 153);
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+.container .search {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.container .pokemon-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .pokemon-menu .pokemon-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 280px;
+    margin: 20px;
+    padding-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    letter-spacing: 1.1px;
+    opacity: 0.5
+}
+
+.container .pokemon-menu .pokemon-card:hover {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 280px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 10px;
+    opacity: 1
+}
+
+.container .pokemon-menu .pokemon-card .top {
+    display: flex;
+
+}
+
+.container .pokemon-menu .pokemon-card .id-num{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(134,195,255,1) 0%, rgba(194,175,255,1) 50%, rgba(240,177,255,1) 100%);
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-family: 'poppins', 'Heebo';
+    color: #fff;
+}
+
+.container .pokemon-menu .pokemon-card .mark-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 6px;
+    font-size: 32px;
+    color:rgba(255,219,0,1);
+}
+
+.container .pokemon-menu .pokemon-card .pokemon-image {
+    margin-top: 30px;
+}
+
+.container .pokemon-menu .pokemon-card h2 {
+    margin: 0;
+}
+
+.container .pokemon-menu .pokemon-card .type {
+    height: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container .pokemon-menu .pokemon-card #moreBtn {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 50%;
+    font-size: 1.2em;
+    font-family: 'poppins', 'Heebo';
+    color: aliceblue;
+    background: linear-gradient(45deg, rgba(238,255,134,1) 0%, rgba(175,221,255,1) 50%, rgba(177,255,207,1) 100%);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.container .search {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.container .search input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #58629b;
+}
+
+.container .search button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;
+    font-size: 2.5em;
+    text-align: center;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+
+/* Modal Boxes CSS */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 30px;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content .modal-header h1{
+    background: linear-gradient(45deg, rgba(134,195,255,1) 0%, rgba(194,175,255,1) 50%, rgba(240,177,255,1) 100%);
+    width: 30%;
+    margin: 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-family: 'poppins', 'Heebo';
+    color: #fff;
+}
+
+.modal-content .modal-body .modal-image img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.modal-content .modal-body .modal-btn .shiny-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background: radial-gradient(circle, rgba(255,126,101,1) 50%, rgba(255,213,0,1) 100%);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.modal-content .modal-body .modal-btn .turn-back-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background: radial-gradient(circle, rgba(255,126,101,1) 50%, rgba(255,213,0,1) 100%);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.modal-content .modal-body .modal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modal-content .modal-body .modal-btn .shiny{
+    font-size: 32px;
+    color: aliceblue;
+}
+
+.modal-content .modal-body .modal-btn .turn-back{
+    font-size: 32px;
+    color: aliceblue;
+}
+
+
